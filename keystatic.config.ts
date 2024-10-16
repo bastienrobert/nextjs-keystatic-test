@@ -1,17 +1,8 @@
 import { config, fields, collection } from '@keystatic/core';
 
-const isLocal = !Boolean(process.env.NEXT_PUBLIC_VERCEL_ENV);
-
 export default config({
-  storage: isLocal
-    ? { kind: 'local' }
-    : {
-        kind: 'github',
-        repo: {
-          name: 'nextjs-keystatic-test',
-          owner: 'unkleho',
-        },
-      },
+  storage: { kind: 'local' },
+  
   collections: {
     posts: collection({
       label: 'Posts',
