@@ -18,7 +18,7 @@ export default async function Page() {
       <ul className="list-disc mb-8 pl-4">
         {posts.map((post) => (
           <li key={post.slug}>
-            <Link href={`/posts/${post.slug}`}>{post.entry.title}</Link>
+            <Link href={`/fr/posts/${post.slug}`}>{post.entry.title}</Link>
           </li>
         ))}
       </ul>
