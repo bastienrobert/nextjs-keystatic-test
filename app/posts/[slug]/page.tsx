@@ -1,4 +1,3 @@
-import { DocumentRenderer } from '@keystatic/core/renderer';
 import Link from 'next/link';
 import { reader } from '@/lib/reader';
 
@@ -29,8 +28,6 @@ export default async function PostPage({
   return (
     <div className="app">
       <h1 className="mb-4 font-semibold text-2xl">{post.title}</h1>
-      <DocumentRenderer document={await post.content()} />
-
       {post.authors?.length > 0 ? (
         <div className="mt-6">
           By{' '}
